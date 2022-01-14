@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="PHPStudios_ExtCartPriceRules::menu"
+             title="Extended Cart Price Rules"
+             module="PHPStudios_ExtCartPriceRules"
+             sortOrder="20"
+             parent="PHPStudios_Core::phpstudios"
+             resource="PHPStudios_ExtCartPriceRules::menu"/>
+        <add id="PHPStudios_ExtCartPriceRules::configuration"
+             title="Configuration"
+             module="PHPStudios_ExtCartPriceRules"
+             sortOrder="30"
+             action="admin/system_config/edit/section/ext_cart_price_rules"
+             resource="PHPStudios_ExtCartPriceRules::configuration"
+             parent="PHPStudios_ExtCartPriceRules::menu"
+        />
+    </menu>
+</config>

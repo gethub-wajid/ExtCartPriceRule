@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Magento\SalesRule\Model\Rule\Action\Discount\CalculatorFactory"
+                type="PHPStudios\ExtCartPriceRules\Model\SalesRule\Rule\Action\Discount\CalculatorFactory"/>
+
+    <type name="Magento\SalesRule\Model\Rule\Metadata\ValueProvider">
+        <plugin name="salesrule-PHPStudios-plugin" type="PHPStudios\ExtCartPriceRules\Plugin\Rule\Metadata\ValueProvider" sortOrder="1"/>
+    </type>
+
+    <type name="Magento\SalesRule\Controller\Adminhtml\Promo\Quote\Save">
+        <plugin name="save_custom_rule_fields" type="PHPStudios\ExtCartPriceRules\Plugin\SaveCustomRuleFields"/>
+    </type>
+
+    <type name="Magento\SalesRule\Model\Rule\DataProvider">
+        <plugin name="ExtCartPriceRules_CustomFields_AddData" type="PHPStudios\ExtCartPriceRules\Plugin\DisplayCustomRuleFields" sortOrder="1"/>
+    </type>
+
+</config>
